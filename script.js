@@ -19,6 +19,12 @@ window.addEventListener('load', function() {
       if ((pilotName.value === '') || (copilotName.value === '') || (fuelLevel.value === '') || (cargoMass.value === '')) {
          alert('Every field required for submission!')
          event.preventDefault();
+      }else if (isNaN(pilotName.value) === false) {
+         alert('Pilot Name can not be a number')
+         event.preventDefault();
+      }else if (isNaN(copilotName.value) === false) {
+         alert('Copilot Name can not be a number')
+         event.preventDefault();
       }else if (isNaN(fuelLevel.value) === true) {
          alert('Fuel Level must be a number!')
          event.preventDefault();
